@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usability Hub</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
     <link rel="shortcut icon" href="./assets/asset 13.svg" type="image/x-icon">
 
 </head>
@@ -26,7 +27,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/asset 0.png" alt="companylogo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links active" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
@@ -36,6 +37,9 @@
                     <li><a href="#" class="hover-link primary-button">Sign Up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle  hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -67,8 +71,8 @@
                 <img class="logo" src="./assets/asset 3.png" alt="">
                 <img class="logo" src="./assets/asset 4.png" alt="">
                 <img class="logo" src="./assets/asset 5.png" alt="">
-                <img class="logo" src="./assets/asset 6.png" alt="">
-                <img class="logo" src="./assets/asset 7.svg" alt="">
+                <img class="logo" src="./assets/samsung.png" alt="">
+                <img class="logo" src="./assets/Microsoft_Logo_512px.png" alt="">
                 <img class="logo" src="./assets/asset 8.png" alt="">
             </div>
         </div>
@@ -147,7 +151,7 @@
     </section>
 
     <section class="big-feature-section">
-        <div class="container big-feature-container flex" style="flex-direction: row-reverse;">
+        <div class="container big-feature-container flex" id="second-big-feature">
             <div class="feature-img">
                 <img src="./assets/asset 16.png" alt="feature-img">
             </div>
@@ -260,6 +264,17 @@
     </div>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/6625fcda06.js" crossorigin="anonymous"></script>
+
+    <!-- Toggle button(hamburger) -->
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
